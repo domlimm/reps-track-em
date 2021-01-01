@@ -4,13 +4,14 @@ import { Feather } from '@expo/vector-icons';
 
 import { Dashboard, History, Temp } from '../screens/index';
 import AddButtonNav from '../components/AddButtonNav';
+import { COLORS } from '../constants/Variables';
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
   return (
     <Tab.Navigator
-      tabBarOptions={{ showLabel: false, activeTintColor: 'green' }}
+      tabBarOptions={{ showLabel: false, activeTintColor: COLORS.primary }}
       initialRouteName='Dashboard'
     >
       <Tab.Screen

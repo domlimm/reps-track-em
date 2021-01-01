@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Platform, Animated } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+
+import { COLORS } from '../constants/Variables';
 
 const AddButtonNav = () => {
   const rotateValue = useState(new Animated.Value(0))[0];
   const [mode, setMode] = useState(false);
-
-  const nav = useNavigation();
 
   const pressHandler = () => {
     Animated.timing(rotateValue, {
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
   button: {
     position: 'absolute',
     alignItems: 'center',
-    backgroundColor: '#7F58FF',
+    backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
     width: 72,
@@ -46,14 +45,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -40,
     elevation: Platform.OS === 'android' ? 5 : 0,
-    shadowColor: '#7F58FF',
+    shadowColor: COLORS.primary,
     shadowOffset: {
       height: 10
     },
     shadowOpacity: 0.3,
     shadowRadius: 5,
     borderWidth: 3,
-    borderColor: '#FFF'
+    borderColor: 'white'
   }
 });
 

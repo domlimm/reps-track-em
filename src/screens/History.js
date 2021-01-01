@@ -1,10 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
+
+import { COLORS } from '../constants/Variables';
+
+const { height } = Dimensions.get('window');
 
 const History = () => {
   return (
     <View style={styles.container}>
-      <Text>History</Text>
+      <View style={styles.headerContainer}>
+        <Text>dark light mode</Text>
+        <Text>header</Text>
+      </View>
+      <View style={styles.dashboardContainer}>
+        <ScrollView>
+          <Text>stuff</Text>
+        </ScrollView>
+      </View>
     </View>
   );
 };
@@ -12,9 +24,18 @@ const History = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.background
+  },
+  headerContainer: {
+    height: 0.33 * height,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: COLORS.primary,
+    borderBottomLeftRadius: 50,
+    borderBottomRightRadius: 50
+  },
+  dashboardContainer: {
+    height: 0.67 * height
   }
 });
 

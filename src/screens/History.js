@@ -12,10 +12,18 @@ const History = () => {
         <Text>dark light mode</Text>
         <Text>header</Text>
       </View>
-      <View style={styles.dashboardContainer}>
-        <ScrollView>
-          <Text>stuff</Text>
-        </ScrollView>
+      <View style={{ flex: 1 }}>
+        <View
+          style={{
+            ...StyleSheet.absoluteFillObject,
+            backgroundColor: COLORS.primary
+          }}
+        />
+        <View style={styles.dashboardContainer}>
+          <ScrollView>
+            <Text>HISTORY</Text>
+          </ScrollView>
+        </View>
       </View>
     </View>
   );
@@ -23,19 +31,27 @@ const History = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: COLORS.background
+    flex: 1
   },
   headerContainer: {
     height: 0.33 * height,
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: COLORS.primary,
-    borderBottomLeftRadius: 50,
-    borderBottomRightRadius: 50
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   dashboardContainer: {
-    height: 0.67 * height
+    flex: 1,
+    height: 0.67 * height,
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+    backgroundColor: COLORS.background,
+    elevation: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  underlayContainer: {
+    flex: 1,
+    backgroundColor: COLORS.primary
   }
 });
 

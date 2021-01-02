@@ -34,7 +34,7 @@ const Dashboard = () => {
         </View>
         <View style={styles.titleContainer}>
           <Text style={styles.greeting}>{greeting}</Text>
-          <Text></Text>
+          <Text style={styles.name}>name</Text>
         </View>
       </View>
       <View style={{ flex: 1 }}>
@@ -72,19 +72,23 @@ const styles = StyleSheet.create({
   toggleContainer: {
     height: 0.33 * 0.3 * height,
     width: '100%',
-    backgroundColor: 'green',
     paddingTop: StatusBar.currentHeight
   },
   titleContainer: {
     height: 0.33 * 0.7 * height,
     width: '100%',
-    backgroundColor: 'red',
     paddingHorizontal: 20
   },
   greeting: {
     fontSize: 20,
     textTransform: 'uppercase',
-    color: 'white'
+    color: COLORS.background
+  },
+  name: {
+    fontSize: 32,
+    textTransform: 'uppercase',
+    color: COLORS.background,
+    fontWeight: 'bold'
   },
   dashboardContainer: {
     flex: 1,

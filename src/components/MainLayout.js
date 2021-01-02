@@ -9,28 +9,11 @@ import {
   TouchableOpacity,
   Appearance
 } from 'react-native';
-import * as Localization from 'expo-localization';
 import { Feather } from '@expo/vector-icons';
 
-import { COLORS } from '../constants/Variables';
+import { COLORS, greeting } from '../constants/Variables';
 
 const { height } = Dimensions.get('window');
-
-const greeting = () => {
-  const dateTimeArray = new Date()
-    .toLocaleString([], { timeZone: Localization.timezone })
-    .split(' ');
-  const time = dateTimeArray[4].split(':');
-  const hour = time[0];
-  const greeting =
-    hour >= 0 && hour < 12
-      ? 'good morning,'
-      : hour >= 12 && hour < 17
-      ? 'good afternoon,'
-      : 'good evening,';
-
-  return greeting;
-};
 
 const Sun = () => <Feather name='sun' size={28} color='#F4D03F' />;
 const Moon = () => <Feather name='moon' size={28} color='#F4D03F' />;
@@ -38,6 +21,8 @@ const Moon = () => <Feather name='moon' size={28} color='#F4D03F' />;
 const colorScheme = Appearance.getColorScheme();
 
 const MainLayout = props => {
+  console.log(colorScheme);
+
   const [isDark, setIsDark] = useState(colorScheme === 'dark' ? true : false);
 
   const toggleHandler = () => {
@@ -49,7 +34,7 @@ const MainLayout = props => {
       <View style={styles.headerContainer}>
         <View style={styles.toggleContainer}>
           <TouchableOpacity onPress={toggleHandler}>
-            {isDark ? <Moon /> : <Sun />}
+            {isDark ? <Sun /> : <Moon />}
           </TouchableOpacity>
         </View>
         <View style={styles.titleContainer}>

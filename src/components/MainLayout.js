@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   Dimensions,
-  StatusBar
+  StatusBar,
+  TouchableOpacity,
+  Appearance
 } from 'react-native';
 import * as Localization from 'expo-localization';
+import { Feather } from '@expo/vector-icons';
 
 import { COLORS } from '../constants/Variables';
 
 const { height } = Dimensions.get('window');
 
-const MainLayout = props => {
+const greeting = () => {
   const dateTimeArray = new Date()
     .toLocaleString([], { timeZone: Localization.timezone })
     .split(' ');
@@ -26,14 +29,31 @@ const MainLayout = props => {
       ? 'good afternoon,'
       : 'good evening,';
 
+  return greeting;
+};
+
+const Sun = () => <Feather name='sun' size={28} color='#F4D03F' />;
+const Moon = () => <Feather name='moon' size={28} color='#F4D03F' />;
+
+const colorScheme = Appearance.getColorScheme();
+
+const MainLayout = props => {
+  const [isDark, setIsDark] = useState(colorScheme === 'dark' ? true : false);
+
+  const toggleHandler = () => {
+    setIsDark(!isDark);
+  };
+
   return (
     <>
       <View style={styles.headerContainer}>
         <View style={styles.toggleContainer}>
-          <Text style={{ fontFamily: 'roboto-medium' }}>dark light mode</Text>
+          <TouchableOpacity onPress={toggleHandler}>
+            {isDark ? <Moon /> : <Sun />}
+          </TouchableOpacity>
         </View>
         <View style={styles.titleContainer}>
-          <Text style={styles.greeting}>{greeting}</Text>
+          <Text style={styles.greeting}>{greeting()}</Text>
           <Text style={styles.name}>name</Text>
         </View>
       </View>
@@ -69,7 +89,11 @@ const styles = StyleSheet.create({
   toggleContainer: {
     height: 0.28 * 0.3 * height,
     width: '100%',
-    paddingTop: StatusBar.currentHeight
+    paddingTop: StatusBar.currentHeight + 15,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    paddingHorizontal: 20
   },
   titleContainer: {
     height: 0.28 * 0.7 * height,
@@ -79,13 +103,15 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 20,
     textTransform: 'uppercase',
-    color: COLORS.background
+    color: COLORS.background,
+    fontFamily: 'roboto-medium'
   },
   name: {
-    fontSize: 32,
+    fontSize: 40,
     textTransform: 'uppercase',
     color: COLORS.background,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'roboto-medium'
   },
   dashboardContainer: {
     flex: 1,

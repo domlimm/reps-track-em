@@ -109,8 +109,8 @@ const styles = StyleSheet.create({
   },
   dashboardScroll: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingTop: 34
   },
   underlayContainer: {
     flex: 1,

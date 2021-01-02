@@ -1,6 +1,7 @@
 export const COLORS = {
   primary: '#00c9bd',
-  background: '#edebf7'
+  background: '#edebf7',
+  card: '#fff'
 };
 
 import * as Localization from 'expo-localization';

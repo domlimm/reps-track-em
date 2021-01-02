@@ -21,8 +21,6 @@ const Moon = () => <Feather name='moon' size={28} color='#F4D03F' />;
 const colorScheme = Appearance.getColorScheme();
 
 const MainLayout = props => {
-  console.log(colorScheme);
-
   const [isDark, setIsDark] = useState(colorScheme === 'dark' ? true : false);
 
   const toggleHandler = () => {

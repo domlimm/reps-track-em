@@ -1,4 +1,4 @@
-export const COLORS = {
+export const LIGHT = {
   primary: '#00c9bd',
   background: '#edebf7',
   card: '#fff'

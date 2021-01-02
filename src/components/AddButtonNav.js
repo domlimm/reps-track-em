@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Platform, Animated } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-import { COLORS } from '../constants/Variables';
+import { LIGHT } from '../constants/Variables';
 
 const AddButtonNav = () => {
   const rotateValue = useState(new Animated.Value(0))[0];
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   button: {
     position: 'absolute',
     alignItems: 'center',
-    backgroundColor: COLORS.primary,
+    backgroundColor: LIGHT.primary,
     alignItems: 'center',
     justifyContent: 'center',
     width: 72,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -40,
     elevation: Platform.OS === 'android' ? 5 : 0,
-    shadowColor: COLORS.primary,
+    shadowColor: LIGHT.primary,
     shadowOffset: {
       height: 10
     },

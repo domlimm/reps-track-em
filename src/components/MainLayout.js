@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-import { COLORS, greeting } from '../constants/Variables';
+import { LIGHT, greeting } from '../constants/Variables';
 
 const { height } = Dimensions.get('window');
 
@@ -44,7 +44,7 @@ const MainLayout = props => {
         <View
           style={{
             ...StyleSheet.absoluteFillObject,
-            backgroundColor: COLORS.primary
+            backgroundColor: LIGHT.primary
           }}
         />
         <View style={styles.dashboardContainer}>
@@ -65,7 +65,7 @@ const MainLayout = props => {
 const styles = StyleSheet.create({
   headerContainer: {
     height: 0.28 * height,
-    backgroundColor: COLORS.primary,
+    backgroundColor: LIGHT.primary,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -86,13 +86,13 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 20,
     textTransform: 'uppercase',
-    color: COLORS.background,
+    color: LIGHT.background,
     fontFamily: 'roboto-medium'
   },
   name: {
     fontSize: 40,
     textTransform: 'uppercase',
-    color: COLORS.background,
+    color: LIGHT.background,
     fontWeight: 'bold',
     fontFamily: 'roboto-medium'
   },
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-    backgroundColor: COLORS.background,
+    backgroundColor: LIGHT.background,
     elevation: 5,
     justifyContent: 'center',
     alignItems: 'center'
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   underlayContainer: {
     flex: 1,
-    backgroundColor: COLORS.primary
+    backgroundColor: LIGHT.primary
   }
 });
 

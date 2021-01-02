@@ -1,16 +1,41 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Dimensions,
+  StatusBar
+} from 'react-native';
+import * as Localization from 'expo-localization';
 
 import { COLORS } from '../constants/Variables';
 
 const { height } = Dimensions.get('window');
 
 const Dashboard = () => {
+  const dateTimeArray = new Date()
+    .toLocaleString([], { timeZone: Localization.timezone })
+    .split(' ');
+  const time = dateTimeArray[4].split(':');
+  const hour = time[0];
+  const greeting =
+    hour >= 0 && hour < 12
+      ? 'good morning,'
+      : hour >= 12 && hour < 17
+      ? 'good afternoon,'
+      : 'good evening,';
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text>dark light mode</Text>
-        <Text>header</Text>
+        <View style={styles.toggleContainer}>
+          <Text style={{ fontFamily: 'roboto-medium' }}>dark light mode</Text>
+        </View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.greeting}>{greeting}</Text>
+          <Text></Text>
+        </View>
       </View>
       <View style={{ flex: 1 }}>
         <View
@@ -20,7 +45,12 @@ const Dashboard = () => {
           }}
         />
         <View style={styles.dashboardContainer}>
-          <ScrollView>
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            decelerationRate='fast'
+            bounces={false}
+            contentContainerStyle={styles.dashboardScroll}
+          >
             <Text>DASHBOARD</Text>
           </ScrollView>
         </View>
@@ -39,6 +69,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  toggleContainer: {
+    height: 0.33 * 0.3 * height,
+    width: '100%',
+    backgroundColor: 'green',
+    paddingTop: StatusBar.currentHeight
+  },
+  titleContainer: {
+    height: 0.33 * 0.7 * height,
+    width: '100%',
+    backgroundColor: 'red',
+    paddingHorizontal: 20
+  },
+  greeting: {
+    fontSize: 20,
+    textTransform: 'uppercase',
+    color: 'white'
+  },
   dashboardContainer: {
     flex: 1,
     height: 0.67 * height,
@@ -47,6 +94,11 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 50,
     backgroundColor: COLORS.background,
     elevation: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  dashboardScroll: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },

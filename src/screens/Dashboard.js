@@ -64,20 +64,20 @@ const styles = StyleSheet.create({
     flex: 1
   },
   headerContainer: {
-    height: 0.33 * height,
+    height: 0.28 * height,
     backgroundColor: COLORS.primary,
     justifyContent: 'center',
     alignItems: 'center'
   },
   toggleContainer: {
-    height: 0.33 * 0.3 * height,
+    height: 0.28 * 0.3 * height,
     width: '100%',
     paddingTop: StatusBar.currentHeight
   },
   titleContainer: {
-    height: 0.33 * 0.7 * height,
+    height: 0.28 * 0.7 * height,
     width: '100%',
-    paddingHorizontal: 20
+    paddingHorizontal: 16
   },
   greeting: {
     fontSize: 20,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   dashboardContainer: {
     flex: 1,
-    height: 0.67 * height,
+    height: 0.72 * height,
     width: '100%',
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,

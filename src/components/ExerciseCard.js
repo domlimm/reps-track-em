@@ -15,8 +15,11 @@ const ExerciseCard = ({ exercise, amount }) => {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: LIGHT.card,
-    height: 300,
-    width: 150
+    height: 200,
+    width: 180,
+    marginRight: 24,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 

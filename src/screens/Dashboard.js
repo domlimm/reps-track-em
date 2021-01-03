@@ -18,10 +18,12 @@ const Dashboard = () => {
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            bounces={false}
             decelerationRate='fast'
+            contentContainerStyle={{ paddingLeft: 4 }}
           >
             {/* for each item in async storage list them */}
+            <ExerciseCard exercise='pull ups' amount={50} />
+            <ExerciseCard exercise='pull ups' amount={50} />
             <ExerciseCard exercise='pull ups' amount={50} />
             <ExerciseCard exercise='pull ups' amount={50} />
             <ExerciseCard exercise='pull ups' amount={50} />
@@ -46,9 +48,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   exercisesContainer: {
+    paddingTop: 16,
     alignSelf: 'center',
     width: '80%',
-    marginVertical: 20
+    marginVertical: 20,
+    height: 240
   }
 });
 

@@ -1,7 +1,8 @@
 export const LIGHT = {
-  primary: '#00c9bd',
-  background: '#edebf7',
-  card: '#fff'
+  primary: '#2CAC87',
+  background: '#E4E3E6',
+  card: '#F2F3F6',
+  font: '#343946'
 };
 
 export const CARD_SHADOW = {
@@ -9,11 +10,11 @@ export const CARD_SHADOW = {
   shadowColor: '#000',
   shadowOffset: {
     width: 0,
-    height: 4
+    height: 2
   },
-  shadowOpacity: 0.3,
-  shadowRadius: 4.65,
-  elevation: 8
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+  elevation: 5
 };
 
 import * as Localization from 'expo-localization';

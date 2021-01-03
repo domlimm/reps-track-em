@@ -81,18 +81,18 @@ const styles = StyleSheet.create({
   titleContainer: {
     height: 0.28 * 0.7 * height,
     width: '100%',
-    paddingHorizontal: 16
+    paddingHorizontal: 24
   },
   greeting: {
     fontSize: 20,
     textTransform: 'uppercase',
-    color: LIGHT.background,
+    color: LIGHT.font,
     fontFamily: 'roboto-medium'
   },
   name: {
     fontSize: 40,
     textTransform: 'uppercase',
-    color: LIGHT.background,
+    color: LIGHT.font,
     fontWeight: 'bold',
     fontFamily: 'roboto-medium'
   },
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-    backgroundColor: LIGHT.background,
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center'
   },

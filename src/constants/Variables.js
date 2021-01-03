@@ -4,6 +4,18 @@ export const LIGHT = {
   card: '#fff'
 };
 
+export const CARD_SHADOW = {
+  borderRadius: 15,
+  shadowColor: '#000',
+  shadowOffset: {
+    width: 0,
+    height: 4
+  },
+  shadowOpacity: 0.3,
+  shadowRadius: 4.65,
+  elevation: 8
+};
+
 import * as Localization from 'expo-localization';
 
 export const greeting = () => {

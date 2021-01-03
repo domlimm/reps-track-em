@@ -23,9 +23,13 @@ const AddButtonNav = () => {
     outputRange: ['0deg', '45deg']
   });
 
+  const animatedRotation = {
+    transform: [{ rotate: rotation }]
+  };
+
   return (
     <TouchableOpacity onPress={pressHandler} style={styles.button}>
-      <Animated.View style={{ transform: [{ rotate: rotation }] }}>
+      <Animated.View style={animatedRotation}>
         <FontAwesome5 name='plus' size={24} color='#FFF' />
       </Animated.View>
     </TouchableOpacity>

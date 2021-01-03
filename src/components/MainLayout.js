@@ -13,7 +13,7 @@ import { Feather } from '@expo/vector-icons';
 
 import { LIGHT, greeting } from '../constants/Variables';
 
-const { height } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 const Sun = () => <Feather name='sun' size={28} color='#F4D03F' />;
 const Moon = () => <Feather name='moon' size={28} color='#F4D03F' />;
@@ -103,14 +103,13 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
     backgroundColor: LIGHT.background,
-    elevation: 5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   dashboardScroll: {
     flex: 1,
-    alignItems: 'center',
-    paddingTop: 34
+    paddingTop: 34,
+    width: width
   },
   underlayContainer: {
     flex: 1,

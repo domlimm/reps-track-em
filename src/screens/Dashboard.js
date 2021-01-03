@@ -23,10 +23,18 @@ const styles = StyleSheet.create({
     flex: 1
   },
   cardContainer: {
+    alignSelf: 'center',
     backgroundColor: LIGHT.card,
     height: 0.28 * height,
     width: 0.8 * width,
-    borderRadius: 10
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 5,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });
 

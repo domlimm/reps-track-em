@@ -10,7 +10,7 @@ const Dashboard = () => {
   return (
     <View style={styles.container}>
       <MainLayout>
-        <View style={[styles.cardContainer, CARD_SHADOW]}>
+        <View style={[styles.chartContainer, CARD_SHADOW]}>
           <Text>chart</Text>
         </View>
       </MainLayout>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  cardContainer: {
+  chartContainer: {
     alignSelf: 'center',
     backgroundColor: LIGHT.card,
     height: 0.28 * height,

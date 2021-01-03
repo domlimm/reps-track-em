@@ -19,7 +19,7 @@ const Dashboard = () => {
             horizontal
             showsHorizontalScrollIndicator={false}
             decelerationRate='fast'
-            contentContainerStyle={{ paddingLeft: 4 }}
+            contentContainerStyle={{ paddingLeft: 2 }}
           >
             {/* for each item in async storage list them */}
             <ExerciseCard exercise='pull ups' amount={50} />

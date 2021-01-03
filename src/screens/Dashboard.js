@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native';
 
 import { LIGHT, CARD_SHADOW } from '../constants/Variables';
 import MainLayout from '../components/MainLayout';
-import IndividualCard from '../components/IndividualCard';
+import ExerciseCard from '../components/ExerciseCard';
 
 const { height, width } = Dimensions.get('window');
 
@@ -14,7 +14,7 @@ const Dashboard = () => {
         <View style={[styles.chartContainer, CARD_SHADOW]}>
           <Text>chart</Text>
         </View>
-        <View style={styles.individualContainer}>
+        <View style={styles.exercisesContainer}>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -22,21 +22,10 @@ const Dashboard = () => {
             decelerationRate='fast'
           >
             {/* for each item in async storage list them */}
-            <IndividualCard exercise='pull ups' amount={50} />
-          </ScrollView>
-        </View>
-        <View style={[styles.chartContainer, CARD_SHADOW]}>
-          <Text>chart</Text>
-        </View>
-        <View style={styles.individualContainer}>
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            bounces={false}
-            decelerationRate='fast'
-          >
-            {/* for each item in async storage list them */}
-            <IndividualCard exercise='pull ups' amount={50} />
+            <ExerciseCard exercise='pull ups' amount={50} />
+            <ExerciseCard exercise='pull ups' amount={50} />
+            <ExerciseCard exercise='pull ups' amount={50} />
+            <ExerciseCard exercise='pull ups' amount={50} />
           </ScrollView>
         </View>
       </MainLayout>
@@ -56,7 +45,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  individualContainer: {
+  exercisesContainer: {
     alignSelf: 'center',
     width: '80%',
     marginVertical: 20

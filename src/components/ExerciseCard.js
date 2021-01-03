@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import { CARD_SHADOW, LIGHT } from '../constants/Variables';
 
-const IndividualCard = ({ exercise, amount }) => {
+const ExerciseCard = ({ exercise, amount }) => {
   return (
     <View style={[styles.card, CARD_SHADOW]}>
       <Text>{exercise}</Text>
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default IndividualCard;
+export default ExerciseCard;

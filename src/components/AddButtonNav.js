@@ -24,7 +24,11 @@ const AddButtonNav = () => {
   });
 
   const animatedRotation = {
-    transform: [{ rotate: rotation }]
+    transform: [
+      {
+        rotate: rotation
+      }
+    ]
   };
 
   return (

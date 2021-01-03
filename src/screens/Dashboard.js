@@ -48,10 +48,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   exercisesContainer: {
-    paddingTop: 16,
+    paddingTop: 28,
     alignSelf: 'center',
     width: '80%',
-    marginVertical: 20,
     height: 240
   }
 });

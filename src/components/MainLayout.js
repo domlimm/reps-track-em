@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   dashboardScroll: {
-    paddingTop: 34,
+    paddingTop: 28,
     width: width
   },
   underlayContainer: {

@@ -1,7 +1,7 @@
 export const LIGHT = {
   primary: '#2CAC87',
   background: '#E4E3E6',
-  card: '#F2F3F6',
+  card: '#F7FAFC',
   font: '#343946'
 };
 

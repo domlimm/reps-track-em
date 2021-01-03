@@ -107,7 +107,6 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   dashboardScroll: {
-    flex: 1,
     paddingTop: 34,
     width: width
   },

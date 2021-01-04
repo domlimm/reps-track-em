@@ -10,7 +10,7 @@ const AddButtonNav = () => {
 
   const pressHandler = () => {
     Animated.timing(rotateValue, {
-      toValue: mode ? 1 : 0,
+      toValue: mode ? 0 : 1,
       duration: 500,
       useNativeDriver: true
     }).start();

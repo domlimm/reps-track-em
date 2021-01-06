@@ -5,7 +5,7 @@ export const LIGHT = {
   font: '#343946'
 };
 
-export const CARD_SHADOW = {
+export const CARD_STYLE = {
   borderRadius: 15,
   shadowColor: '#000',
   shadowOffset: {

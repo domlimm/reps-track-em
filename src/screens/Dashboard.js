@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native';
 
-import { LIGHT, CARD_SHADOW } from '../constants/Variables';
+import { LIGHT, CARD_STYLE } from '../constants/Variables';
 import MainLayout from '../components/MainLayout';
 import ExerciseCard from '../components/ExerciseCard';
 
@@ -12,7 +12,7 @@ const Dashboard = () => {
     <View style={styles.container}>
       <MainLayout>
         <Text style={styles.header}>overview</Text>
-        <View style={[styles.chartContainer, CARD_SHADOW]}>
+        <View style={[styles.chartContainer, CARD_STYLE]}>
           <Text>chart</Text>
         </View>
         <Text style={styles.header}>summary</Text>

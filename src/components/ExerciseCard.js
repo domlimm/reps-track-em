@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import { CARD_SHADOW, LIGHT } from '../constants/Variables';
+import { CARD_STYLE, LIGHT } from '../constants/Variables';
 
 const ExerciseCard = ({ exercise, amount }) => {
   return (
-    <View style={[styles.card, CARD_SHADOW]}>
+    <View style={[styles.card, CARD_STYLE]}>
       <View style={{ flexDirection: 'row' }}>
         <View style={{ flex: 0.5 }}>
           <Text style={styles.totalText}>TOTAL</Text>

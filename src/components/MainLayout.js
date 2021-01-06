@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     fontFamily: 'roboto-medium'
   },
   name: {
-    fontSize: 40,
+    fontSize: 48,
     textTransform: 'uppercase',
     color: LIGHT.font,
     fontWeight: 'bold',

@@ -6,8 +6,15 @@ import { CARD_SHADOW, LIGHT } from '../constants/Variables';
 const ExerciseCard = ({ exercise, amount }) => {
   return (
     <View style={[styles.card, CARD_SHADOW]}>
-      <Text>{exercise}</Text>
-      <Text>{amount}</Text>
+      <View style={{ flexDirection: 'row' }}>
+        <View style={{ flex: 0.5 }}>
+          <Text style={styles.totalText}>TOTAL</Text>
+          <Text style={styles.headerText}>{exercise}</Text>
+        </View>
+        <View style={{ flex: 0.5 }}>
+          <Text style={styles.valueText}>{amount}</Text>
+        </View>
+      </View>
     </View>
   );
 };
@@ -18,8 +25,8 @@ const styles = StyleSheet.create({
     height: 200,
     width: 180,
     marginRight: 24,
-    justifyContent: 'center',
-    alignItems: 'center'
+    paddingHorizontal: 20,
+    paddingTop: 24
   }
 });
 

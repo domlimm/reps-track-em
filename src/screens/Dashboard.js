@@ -11,9 +11,11 @@ const Dashboard = () => {
   return (
     <View style={styles.container}>
       <MainLayout>
+        <Text style={styles.header}>overview</Text>
         <View style={[styles.chartContainer, CARD_SHADOW]}>
           <Text>chart</Text>
         </View>
+        <Text style={styles.header}>summary</Text>
         <View style={styles.exercisesContainer}>
           <ScrollView
             horizontal
@@ -45,14 +47,23 @@ const styles = StyleSheet.create({
     height: 0.28 * height,
     width: 0.8 * width,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginBottom: 22
   },
   exercisesContainer: {
-    paddingTop: 28,
     alignSelf: 'center',
     width: '100%',
     height: 240,
     paddingLeft: width * 0.1
+  },
+  header: {
+    fontSize: 24,
+    textTransform: 'uppercase',
+    color: LIGHT.font,
+    fontWeight: 'bold',
+    fontFamily: 'roboto-medium',
+    paddingLeft: width * 0.1,
+    marginBottom: 10
   }
 });
 

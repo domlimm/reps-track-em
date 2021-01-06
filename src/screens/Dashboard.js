@@ -50,8 +50,9 @@ const styles = StyleSheet.create({
   exercisesContainer: {
     paddingTop: 28,
     alignSelf: 'center',
-    width: '80%',
-    height: 240
+    width: '100%',
+    height: 240,
+    paddingLeft: width * 0.1
   }
 });
 

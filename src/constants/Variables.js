@@ -39,14 +39,26 @@ import React from 'react';
 import { FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 
 const CARD_ICONS = [
-  <MaterialCommunityIcons name='human' size={24} color='black' />,
-  <MaterialCommunityIcons name='human-handsup' size={24} color='black' />,
-  <FontAwesome5 name='weight' size={24} color='black' />,
-  <FontAwesome5 name='weight-hanging' size={24} color='black' />,
-  <MaterialCommunityIcons name='weight' size={24} color='black' />,
-  <MaterialCommunityIcons name='weight-kilogram' size={24} color='black' />,
-  <MaterialCommunityIcons name='weight-lifter' size={24} color='black' />,
-  <MaterialCommunityIcons name='weight-pound' size={24} color='black' />
+  <MaterialCommunityIcons name='human' size={24} color={LIGHT.primary} />,
+  <MaterialCommunityIcons
+    name='human-handsup'
+    size={24}
+    color={LIGHT.primary}
+  />,
+  <FontAwesome5 name='weight' size={24} color={LIGHT.primary} />,
+  <FontAwesome5 name='weight-hanging' size={24} color={LIGHT.primary} />,
+  <MaterialCommunityIcons name='weight' size={24} color={LIGHT.primary} />,
+  <MaterialCommunityIcons
+    name='weight-kilogram'
+    size={24}
+    color={LIGHT.primary}
+  />,
+  <MaterialCommunityIcons
+    name='weight-lifter'
+    size={24}
+    color={LIGHT.primary}
+  />,
+  <MaterialCommunityIcons name='weight-pound' size={24} color={LIGHT.primary} />
 ];
 
 export const generateCardIcon = () =>
